@@ -6,8 +6,13 @@ This is a simple web app hosted with the express.js server on Port 8080.
 
 In the command line or bash prompt, when the app is launched it will begin the connection to the server.
 
-To launch the server: Open a command prompt.
-> cd .../key
+To launch the server: Download the repo
+Extract the .zip file
+Rename file to key_parker_proj
+Open a command prompt.
+>cd .../key_parker_proj
+>node app.js
+Go to http://localost:8080
 
 The command line will print out the current date time in YYYY-MM-DD HH:mm:ss format every 30 seconds.
 
