@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sun, 12 May 2019 11:22:23 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>key_parker_index</title>
+    
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style type="text/css">
+    <!--
+    body {
+      color:#000000;
+      background-color: white;
+      background-image:url('Background Image');
+      background-repeat:no-repeat;
+      font-family:sans-serif;
+    }
+    a  { color:#0000FF; }
+    a:visited { color:#800080; }
+    a:hover { color:#008000; }
+    a:active { color:#FF0000; }
+    -->
+    </style>
+	
+
+	
+  </head>
+  <body onLoad="instructions()">
+
+  <h1><strong>Project for defining a training scope</strong></h1>
+  <h2>Key Parker</h2>
+ <!-- <p>Written by Harry Packer for Key Parker Ltd.</p>-->
+  <p>Task description: Using Node.js, javascript and HTML, create a small working application to do the following: <br /><br />
+
+-          Run a basic HTTP server on port 8080 of localhost in a command prompt (console)<br />
+
+-          In the console, on start up log out the current date and time in format YYYY-MM-DD HH:mm:ss and repeat this every 30 seconds.<br />
+
+-          The node.js server should be able to serve an html page called index.html. This page should contain the following:<br /><br />
+
+1.) 3 input fields with labels – Title, Name and Email Address<br />
+
+2.) A Submit button with a click event.<br />
+
+3.) On submit, show an alert summarising the data entered.<br />
+
+4.) A Reset button which will clear the data already entered in the inputs.<br />
+
+5.) Provide instructions on how to run and use the application<br /><br />
+
+Optional (if you have time)<br />
+
+-          Add your own validation to the input fields (e.g. required field, email address validation)<br />
+
+-          Any other enhancements you feel are relevant.</p>
+
+<div id="input_fields">
+
+<form id="formA" onsubmit="return validateForm()" method="post" >
+
+<label for="title">Title: </label>
+      <input type="text" id="title" autofocus="" required />
+<br />
+
+<label for="Name">Name: </label>
+	   <input type="text" id="name" required />
+
+<br />
+
+<label for="username"> Email address:  </label>
+	   <input type="text" id="username" required />
+<br />
+<br />
+
+	<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<button onclick="resetEvent()" type="reset"> Reset </button>
+    <button onclick="submitEvent()" type="submit"> Submit</button>
+</form>
+</div>
+  </body>
+  
+  <script>
+    
+	
+	/*function instructions(){
+	window.confirm("Hi there! Thank you for using this application.\nTo use the form, simply enter your details in the boxes below and click \"submit\". This should confirm your submission and show you your details!\nIf you make a mistake, don't worry, simply click \"reset\" and start again!")	
+	}
+  */
+    function validateForm() {
+	var usernameValid = document.forms["formA"]["username"].value;
+	var nameValid = document.forms["formA"]["name"].value;
+	var titleValid = document.forms["formA"]["title"].value;
+	
+	if (usernameValid == "") {
+	//alert("Please enter an email address.");
+	return false;
+	}
+	
+	if (nameValid == "") {
+	//alert("Please enter a name.");
+	return false;
+	}
+	
+	if (titleValid == "") {
+	//alert("Please enter a title.");
+	return false;
+	}
+	}  
+  
+	function submitEvent(){
+	var username = document.getElementById("username").value;
+	var name = document.getElementById("name").value;
+	var title = document.getElementById("title").value;
+	
+	if (validateForm() != false){
+	alert("Thank you, your details have been submitted.\nYour title is: " + title + "\nYour Name is: " + name + "\nYour Username is: " + username)
+	}
+	}
+	
+	function resetEvent(){
+	alert("The form has been reset.")
+	}
+	
+	
+	</script>
+	
+</html>
