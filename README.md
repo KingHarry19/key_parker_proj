@@ -5,6 +5,10 @@ Project to establish training scope
 This is a simple web app hosted with the express.js server on Port 8080.
 
 In the command line or bash prompt, when the app is launched it will begin the connection to the server.
+
+To launch the server: Open a command prompt.
+> cd .../key
+
 The command line will print out the current date time in YYYY-MM-DD HH:mm:ss format every 30 seconds.
 
 The web app will have 3 input fields. Title, Name, Email address.
